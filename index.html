@@ -4,15 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Used Excavators in Sri Lanka | Monorays Heavy Machines</title>
-    <meta name="description" content="Six used excavators available for inspection in Vavuniya. Call or WhatsApp Monorays Heavy Machines.">
+    <meta name="description" content="Used Japan-imported excavators for inspection in Vavuniya. Low hours, good condition. Call or WhatsApp Monorays Heavy Machines.">
+    <link rel="icon" href="assets/logo/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#machine-compare">Skip to machine list</a>
     <header class="topbar">
-      <div>
-        <p class="eyebrow">Vavuniya, Sri Lanka</p>
-        <h1>Used Excavators Available Now</h1>
-      </div>
+      <a class="brand" href="./" aria-label="Monorays Heavy Machines">
+        <img class="logo" src="assets/logo/logo.png" alt="Monorays Heavy Machines" width="2172" height="724">
+      </a>
       <div class="top-actions">
         <a class="btn ghost" href="tel:+94766975261">Call</a>
         <a class="btn primary" href="https://wa.me/94766975261">WhatsApp</a>
@@ -21,28 +26,55 @@
 
     <main>
       <section class="intro">
-        <div>
-          <p class="seller">Monorays Heavy Machines</p>
-          <p class="lead">CAT, Komatsu, and Kobelco machines ready for buyer inspection. Prices are shown in Sri Lankan lakhs.</p>
-        </div>
-        <div class="summary">
-          <span>6 machines</span>
-          <span>Inspection in Vavuniya</span>
-          <span>Call / WhatsApp direct</span>
+        <p class="eyebrow">Inspection in Vavuniya</p>
+        <h1>Used excavators for sale</h1>
+        <div class="lang-copy">
+          <details lang="en" open>
+            <summary aria-label="English">
+              <p>All excavators are imported from Japan, maintained in good condition, and have relatively low operating hours.</p>
+            </summary>
+          </details>
+          <details lang="ta">
+            <summary aria-label="Tamil">
+              <p>அனைத்து எக்ஸ்கவேட்டர் இயந்திரங்களும் ஜப்பானிலிருந்து இறக்குமதி செய்யப்பட்டவை. அவை நல்ல நிலையில் பராமரிக்கப்பட்டுள்ளதுடன், ஒப்பீட்டளவில் குறைந்த செயல்பாட்டு மணிநேரங்களையே கொண்டுள்ளன.</p>
+            </summary>
+          </details>
+          <details lang="si">
+            <summary aria-label="Sinhala">
+              <p>සියලුම Excavator යන්ත්‍ර ජපානයෙන් ආනයනය කර ඇති අතර, හොඳ තත්ත්වයේ පවත්වාගෙන යන ලද සහ සාපේක්ෂව අඩු මෙහෙයුම් පැය ගණනක් සහිත යන්ත්‍ර වේ.</p>
+            </summary>
+          </details>
         </div>
       </section>
 
+      <section class="chooser" aria-labelledby="chooser-title">
+        <div class="chooser-head">
+          <div>
+            <h2 id="chooser-title">Compare before you scroll</h2>
+            <p class="chooser-note">Asking prices — all negotiable</p>
+          </div>
+          <div class="filters" id="brand-filters" role="group" aria-label="Filter by brand"></div>
+        </div>
+        <div class="compare" id="machine-compare"></div>
+      </section>
+
+      <p class="grid-label" id="grid-label">All 6 machines</p>
       <section id="machine-grid" class="machine-grid" aria-label="Available machines"></section>
     </main>
 
     <nav class="sticky-actions" aria-label="Contact">
-      <a href="tel:+94766975261">Call +94 76 697 5261</a>
+      <a href="tel:+94766975261" aria-label="Call +94 76 697 5261">Call now</a>
       <a href="https://wa.me/94766975261">WhatsApp</a>
     </nav>
 
     <dialog id="machine-dialog">
-      <button class="close" id="close-dialog" aria-label="Close">x</button>
-      <div id="dialog-content"></div>
+      <div class="dialog-stage">
+        <button class="close" id="close-dialog" aria-label="Close">×</button>
+        <button class="dialog-nav prev" id="prev-media" aria-label="Previous photo">‹</button>
+        <button class="dialog-nav next" id="next-media" aria-label="Next photo">›</button>
+        <div id="dialog-media"></div>
+        <p class="dialog-count" id="dialog-count"></p>
+      </div>
     </dialog>
 
     <script src="machine-data.js"></script>

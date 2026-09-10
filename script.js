@@ -1,106 +1,285 @@
 const grid = document.querySelector("#machine-grid");
+const compare = document.querySelector("#machine-compare");
+const filters = document.querySelector("#brand-filters");
+const gridLabel = document.querySelector("#grid-label");
 const dialog = document.querySelector("#machine-dialog");
-const dialogContent = document.querySelector("#dialog-content");
+const dialogMedia = document.querySelector("#dialog-media");
+const dialogCount = document.querySelector("#dialog-count");
 const closeDialog = document.querySelector("#close-dialog");
+const prevMedia = document.querySelector("#prev-media");
+const nextMedia = document.querySelector("#next-media");
+const THUMB_LIMIT = 4;
 
-const formatPhone = "+94 76 697 5261";
+const CLASS_LABEL = {
+  "cat-308e2cr": "8-ton class",
+  "komatsu-pc78uu": "8-ton class",
+  "cat-030esr": "3-ton class",
+  "komatsu-pc35mr-3": "3.5-ton class",
+  "kobelco-sr30-sk30sr": "3-ton class",
+  "komatsu-pc20uu-30": "2-ton class",
+};
+
+const FILTERS = [
+  { id: "all", label: "All 6" },
+  { id: "cat", label: "CAT" },
+  { id: "komatsu", label: "Komatsu" },
+  { id: "kobelco", label: "Kobelco" },
+];
+
+let activeMachine = null;
+let activeIndex = 0;
+let activeFilter = "all";
 
 function whatsappHref(machine) {
   const text = encodeURIComponent(`Hi, I am interested in the ${machine.model_to_show}. Is it available for inspection in Vavuniya?`);
   return `https://wa.me/94766975261?text=${text}`;
 }
 
+function isVideo(item) {
+  return item.type === "video";
+}
+
+function machineBrand(machine) {
+  if (machine.id.startsWith("cat-")) return "CAT";
+  if (machine.id.startsWith("komatsu-")) return "Komatsu";
+  return "Kobelco";
+}
+
+function brandSlug(machine) {
+  return machineBrand(machine).toLowerCase();
+}
+
+function classLabel(machine) {
+  return CLASS_LABEL[machine.id] || "";
+}
+
+function mediaCounts(machine) {
+  const videos = machine.media.filter(isVideo).length;
+  const photos = machine.media.length - videos;
+  return { photos, videos, total: machine.media.length };
+}
+
+function heroItem(machine) {
+  return machine.hero_media || machine.media[0];
+}
+
+function heroIndex(machine) {
+  const hero = heroItem(machine);
+  const index = machine.media.findIndex((item) => item.src === hero.src);
+  return index >= 0 ? index : 0;
+}
+
+function thumbEntries(machine) {
+  const hero = heroItem(machine);
+  return machine.media
+    .map((item, index) => ({ item, index }))
+    .filter((entry) => entry.item.src !== hero.src);
+}
+
 function card(machine) {
   const article = document.createElement("article");
-  article.className = "machine-card";
+  const brand = brandSlug(machine);
+  article.className = `machine-card brand-${brand}`;
   article.id = machine.id;
+  article.dataset.brand = brand;
 
-  const visibleMedia = machine.media.slice(0, 8);
-  const remaining = Math.max(machine.media.length - visibleMedia.length, 0);
-  const thumbs = visibleMedia
-    .map((item, index) => `
-      <button type="button" data-machine="${machine.id}" data-index="${index}" aria-label="Open ${machine.model_to_show} media ${index + 1}">
-        ${mediaThumb(item, machine, index)}
-        ${index === visibleMedia.length - 1 && remaining > 0 ? `<span class="thumb-more">+${remaining}</span>` : ""}
+  const counts = mediaCounts(machine);
+  const thumbsSource = thumbEntries(machine);
+  const visible = thumbsSource.slice(0, THUMB_LIMIT);
+  const remaining = Math.max(thumbsSource.length - visible.length, 0);
+  const thumbs = visible
+    .map((entry, visibleIndex) => `
+      <button type="button" data-machine="${machine.id}" data-index="${entry.index}" aria-label="Open ${machine.model_to_show} media ${visibleIndex + 1}">
+        ${mediaThumb(entry.item, machine, visibleIndex)}
+        ${visibleIndex === visible.length - 1 && remaining > 0 ? `<span class="thumb-more">+${remaining}</span>` : ""}
       </button>
     `)
     .join("");
 
   article.innerHTML = `
-    ${heroMedia(machine)}
+    ${heroMedia(machine, counts)}
     <div class="machine-body">
+      <p class="machine-kicker">
+        <span class="brand-chip ${brand}">${machineBrand(machine)}</span>
+        <span>${classLabel(machine)}</span>
+      </p>
       <div class="machine-title-row">
-        <div>
-          <h2>${machine.display_name}</h2>
-          <p class="model">${machine.model_to_show}</p>
+        <h2>${machine.model_to_show}</h2>
+        <div class="price-block">
+          <p class="price">${machine.price}</p>
+          <span class="price-note">Negotiable</span>
         </div>
-        <div class="price">${machine.price}</div>
       </div>
       <div class="specs" aria-label="${machine.model_to_show} specifications">
         <div class="spec"><small>Year</small><strong>${machine.year}</strong></div>
-        <div class="spec"><small>Hours</small><strong>${machine.hours}</strong></div>
-        <div class="spec"><small>Location</small><strong>Vavuniya</strong></div>
+        <div class="spec spec-hours"><small>Hours</small><strong>${machine.hours}</strong></div>
       </div>
       <div class="thumbs">${thumbs}</div>
+      <button type="button" class="see-all" data-machine="${machine.id}" data-index="${heroIndex(machine)}">
+        View all ${counts.total} photos${counts.videos ? ` · ${counts.videos} video${counts.videos === 1 ? "" : "s"}` : ""}
+      </button>
       <div class="card-actions">
         <a href="tel:+94766975261">Call</a>
         <a class="primary" href="${whatsappHref(machine)}">WhatsApp</a>
       </div>
-      <p class="note">Inspection available in Vavuniya. Ask for ${machine.model_to_show} when calling.</p>
+      <p class="note">Ask for <strong>${machine.model_to_show}</strong> when you call.</p>
     </div>
   `;
 
   return article;
 }
 
-function isVideo(item) {
-  return item.type === "video";
-}
-
-function heroMedia(machine) {
-  const hero = machine.hero_media || machine.media[0];
-  if (isVideo(hero)) {
-    return `<video class="hero-img" src="${hero.src}" muted playsinline controls preload="metadata"></video>`;
-  }
-  return `<img class="hero-img" src="${hero.src}" alt="${machine.model_to_show}">`;
+function heroMedia(machine, counts) {
+  const hero = heroItem(machine);
+  const media = isVideo(hero)
+    ? `<video class="hero-img" src="${hero.src}" muted playsinline preload="metadata"></video>`
+    : `<img class="hero-img" src="${hero.src}" alt="${machine.model_to_show}">`;
+  return `
+    <button type="button" class="hero-btn" data-machine="${machine.id}" data-index="${heroIndex(machine)}" aria-label="Open ${machine.model_to_show} photos">
+      ${media}
+      <span class="hero-overlay">
+        <span class="hero-count">${counts.total} photos</span>
+      </span>
+    </button>
+  `;
 }
 
 function mediaThumb(item, machine, index) {
   if (isVideo(item)) {
-    return `<video src="${item.src}" muted playsinline preload="metadata" aria-label="${machine.model_to_show} video ${index + 1}"></video>`;
+    return `<span class="video-thumb"><video src="${item.src}" muted playsinline preload="metadata" aria-label="${machine.model_to_show} video ${index + 1}"></video></span>`;
   }
   return `<img src="${item.src}" alt="${machine.model_to_show} view ${index + 1}" loading="lazy">`;
 }
 
-function showMedia(machine, item) {
+function showMedia(machine, index) {
+  activeMachine = machine;
+  activeIndex = (index + machine.media.length) % machine.media.length;
+  const item = machine.media[activeIndex];
   const mediaMarkup = isVideo(item)
     ? `<video class="dialog-media" src="${item.src}" controls playsinline autoplay></video>`
     : `<img class="dialog-media" src="${item.src}" alt="${machine.model_to_show}">`;
-  dialogContent.innerHTML = `
-    ${mediaMarkup}
-    <div class="dialog-body">
-      <h2>${machine.model_to_show}</h2>
-      <p class="model">${machine.year} | ${machine.hours} | ${machine.price} | Vavuniya</p>
-      <div class="card-actions">
-        <a href="tel:+94766975261">Call ${formatPhone}</a>
-        <a class="primary" href="${whatsappHref(machine)}">WhatsApp</a>
-      </div>
+  dialogMedia.innerHTML = mediaMarkup;
+  dialogCount.textContent = `${activeIndex + 1} / ${machine.media.length}`;
+  if (!dialog.open) dialog.showModal();
+}
+
+function stepMedia(delta) {
+  if (!activeMachine) return;
+  showMedia(activeMachine, activeIndex + delta);
+}
+
+function renderCompare(machines) {
+  compare.innerHTML = `
+    <div class="compare-head" aria-hidden="true">
+      <span>Brand</span>
+      <span>Machine</span>
+      <span>Specs</span>
+      <span class="idx-price-label">Price</span>
     </div>
+    ${machines.map((machine) => `
+      <a class="compare-row brand-${brandSlug(machine)}" href="#${machine.id}">
+        <span class="brand-chip ${brandSlug(machine)}">${machineBrand(machine)}</span>
+        <span class="idx-model">${machine.model_to_show}</span>
+        <span class="idx-meta">${classLabel(machine).replace(" class", "")} · ${machine.year} · ${machine.hours}</span>
+        <strong class="idx-price">${machine.price}</strong>
+      </a>
+    `).join("")}
   `;
-  dialog.showModal();
+}
+
+function renderFilters() {
+  filters.innerHTML = FILTERS.map((item) => `
+    <button type="button" class="filter${item.id === activeFilter ? " is-on" : ""}" data-filter="${item.id}" aria-pressed="${item.id === activeFilter}">
+      ${item.label}
+    </button>
+  `).join("");
+}
+
+function applyFilter() {
+  const cards = [...grid.querySelectorAll(".machine-card")];
+  const rows = [...compare.querySelectorAll(".compare-row")];
+  let visible = 0;
+  cards.forEach((cardEl) => {
+    const isVisible = activeFilter === "all" || cardEl.dataset.brand === activeFilter;
+    cardEl.hidden = !isVisible;
+    if (isVisible) visible += 1;
+  });
+  rows.forEach((row) => {
+    const brand = [...row.classList].find((name) => name.startsWith("brand-"))?.replace("brand-", "");
+    row.hidden = !(activeFilter === "all" || brand === activeFilter);
+  });
+  gridLabel.textContent = activeFilter === "all"
+    ? `All ${visible} machines`
+    : `${visible} ${FILTERS.find((item) => item.id === activeFilter).label} machine${visible === 1 ? "" : "s"}`;
+  renderFilters();
 }
 
 const data = window.MONORAYS_DATA;
 const byId = new Map(data.machines.map((machine) => [machine.id, machine]));
 
+renderCompare(data.machines);
+renderFilters();
 data.machines.forEach((machine) => grid.appendChild(card(machine)));
 
 grid.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-index]");
   if (!button) return;
   const machine = byId.get(button.dataset.machine);
-  const item = machine.media[Number(button.dataset.index)];
-  showMedia(machine, item);
+  showMedia(machine, Number(button.dataset.index));
+});
+
+filters.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-filter]");
+  if (!button) return;
+  activeFilter = button.dataset.filter;
+  applyFilter();
+});
+
+compare.addEventListener("click", (event) => {
+  const row = event.target.closest("a.compare-row");
+  if (!row) return;
+  const id = row.getAttribute("href").slice(1);
+  const cardEl = document.getElementById(id);
+  if (!cardEl || cardEl.hidden) {
+    activeFilter = "all";
+    applyFilter();
+  }
 });
 
 closeDialog.addEventListener("click", () => dialog.close());
+prevMedia.addEventListener("click", () => stepMedia(-1));
+nextMedia.addEventListener("click", () => stepMedia(1));
+
+dialog.addEventListener("click", (event) => {
+  if (event.target === dialog) dialog.close();
+});
+
+dialog.addEventListener("close", () => {
+  activeMachine = null;
+  dialogMedia.innerHTML = "";
+  dialogCount.textContent = "";
+});
+
+document.addEventListener("keydown", (event) => {
+  if (!dialog.open) return;
+  if (event.key === "ArrowLeft") stepMedia(-1);
+  if (event.key === "ArrowRight") stepMedia(1);
+});
+
+let swipeX = 0;
+let swipeY = 0;
+
+dialog.addEventListener("touchstart", (event) => {
+  const touch = event.changedTouches[0];
+  swipeX = touch.clientX;
+  swipeY = touch.clientY;
+}, { passive: true });
+
+dialog.addEventListener("touchend", (event) => {
+  if (!dialog.open || !activeMachine) return;
+  const touch = event.changedTouches[0];
+  const dx = touch.clientX - swipeX;
+  const dy = touch.clientY - swipeY;
+  if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
+  stepMedia(dx < 0 ? 1 : -1);
+}, { passive: true });
