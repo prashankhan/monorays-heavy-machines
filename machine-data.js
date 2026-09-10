@@ -1,0 +1,1556 @@
+window.MONORAYS_DATA = {
+  "campaign": {
+    "client": "Monorays SriLanka",
+    "seller_display_name": "Monorays Heavy Machines",
+    "phone": "+94766975261",
+    "whatsapp": "+94766975261",
+    "inspection_location": "Vavuniya",
+    "document_language": "English",
+    "ad_copy_languages": [
+      "English",
+      "Sinhala",
+      "Tamil"
+    ],
+    "campaign_duration": "30 days",
+    "platform_budget_lkr": {
+      "ikman": 50000,
+      "facebook_instagram": 150000,
+      "tiktok": 120000,
+      "total": 320000
+    }
+  },
+  "machines": [
+    {
+      "id": "cat-308e2cr",
+      "display_name": "CAT 308 E CR",
+      "model_to_show": "CAT 308E2CR",
+      "year": 2020,
+      "year_source": "import document",
+      "hours": "2500 hrs",
+      "price": "130 Lakhs",
+      "media_folder": "Assets/Machine Media/01_CAT_308_E_CR_2016_2500hrs_130Lakhs",
+      "hero_media": {
+        "src": "assets/media/cat-308e2cr/004-img-2420.mp4",
+        "name": "IMG_2420.MOV",
+        "type": "video"
+      },
+      "media": [
+        {
+          "src": "assets/media/cat-308e2cr/001-img-2420-2.mp4",
+          "name": "IMG_2420 2.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/002-img-2420-3.mp4",
+          "name": "IMG_2420 3.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/003-img-2420-4.mp4",
+          "name": "IMG_2420 4.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/004-img-2420.mp4",
+          "name": "IMG_2420.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/005-img-2421-2.jpg",
+          "name": "IMG_2421 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/006-img-2421-3.jpg",
+          "name": "IMG_2421 3.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/007-img-2421-4.jpg",
+          "name": "IMG_2421 4.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/008-img-2421.jpg",
+          "name": "IMG_2421.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/009-img-2422-2.jpg",
+          "name": "IMG_2422 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/010-img-2422-3.jpg",
+          "name": "IMG_2422 3.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/011-img-2422-4.jpg",
+          "name": "IMG_2422 4.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/012-img-2422.jpg",
+          "name": "IMG_2422.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/013-img-2423-2.jpg",
+          "name": "IMG_2423 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/014-img-2423-3.jpg",
+          "name": "IMG_2423 3.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/015-img-2423.jpg",
+          "name": "IMG_2423.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/016-img-2424-2.jpg",
+          "name": "IMG_2424 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/017-img-2424-3.jpg",
+          "name": "IMG_2424 3.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/018-img-2424.jpg",
+          "name": "IMG_2424.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/019-img-2425-2.jpg",
+          "name": "IMG_2425 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/020-img-2425-3.jpg",
+          "name": "IMG_2425 3.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/021-img-2425.jpg",
+          "name": "IMG_2425.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/022-img-2426-2.mp4",
+          "name": "IMG_2426 2.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/023-img-2426-3.mp4",
+          "name": "IMG_2426 3.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/024-img-2426.mp4",
+          "name": "IMG_2426.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/025-img-2427-2.jpg",
+          "name": "IMG_2427 2.JPG",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/026-img-2427-3.jpg",
+          "name": "IMG_2427 3.JPG",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/027-img-2427.jpg",
+          "name": "IMG_2427.JPG",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/028-img-2428-2.jpg",
+          "name": "IMG_2428 2.JPG",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/029-img-2428-3.jpg",
+          "name": "IMG_2428 3.JPG",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/030-img-2428.jpg",
+          "name": "IMG_2428.JPG",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/031-img-2429-2.mp4",
+          "name": "IMG_2429 2.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/032-img-2429-3.mp4",
+          "name": "IMG_2429 3.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/033-img-2429.mp4",
+          "name": "IMG_2429.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/034-img-2430-2.jpg",
+          "name": "IMG_2430 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/035-img-2430-3.jpg",
+          "name": "IMG_2430 3.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/036-img-2430.jpg",
+          "name": "IMG_2430.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/037-img-2431-2.jpg",
+          "name": "IMG_2431 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/038-img-2431-3.jpg",
+          "name": "IMG_2431 3.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/039-img-2431.jpg",
+          "name": "IMG_2431.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/040-img-2432-2.jpg",
+          "name": "IMG_2432 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/041-img-2432-3.jpg",
+          "name": "IMG_2432 3.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/042-img-2432.jpg",
+          "name": "IMG_2432.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/043-img-2433-2.jpg",
+          "name": "IMG_2433 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/044-img-2433-3.jpg",
+          "name": "IMG_2433 3.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/045-img-2433.jpg",
+          "name": "IMG_2433.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/046-img-2434.jpg",
+          "name": "IMG_2434.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/047-img-2435.jpg",
+          "name": "IMG_2435.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/048-img-2436.jpg",
+          "name": "IMG_2436.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/049-img-2437.jpg",
+          "name": "IMG_2437.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/050-img-2438.jpg",
+          "name": "IMG_2438.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/051-img-2439.jpg",
+          "name": "IMG_2439.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/052-img-2440.jpg",
+          "name": "IMG_2440.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/053-img-2441.jpg",
+          "name": "IMG_2441.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/054-img-2442.jpg",
+          "name": "IMG_2442.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/055-img-2443.jpg",
+          "name": "IMG_2443.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/056-img-2444.jpg",
+          "name": "IMG_2444.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/057-img-2445.jpg",
+          "name": "IMG_2445.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/058-img-2446.jpg",
+          "name": "IMG_2446.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/059-img-2447.jpg",
+          "name": "IMG_2447.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/060-img-2448.jpg",
+          "name": "IMG_2448.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/061-img-2449.jpg",
+          "name": "IMG_2449.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/062-img-2450.jpg",
+          "name": "IMG_2450.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/063-img-2451.jpg",
+          "name": "IMG_2451.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/064-img-2452.jpg",
+          "name": "IMG_2452.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/065-img-2453.jpg",
+          "name": "IMG_2453.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/066-img-2454.jpg",
+          "name": "IMG_2454.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/067-img-2455.jpg",
+          "name": "IMG_2455.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/068-img-2456.jpg",
+          "name": "IMG_2456.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/069-img-2457.jpg",
+          "name": "IMG_2457.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/070-img-2458.jpg",
+          "name": "IMG_2458.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/071-img-2459.jpg",
+          "name": "IMG_2459.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/072-img-2460.jpg",
+          "name": "IMG_2460.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/073-img-2461.jpg",
+          "name": "IMG_2461.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/074-img-2462.jpg",
+          "name": "IMG_2462.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/075-img-2463.jpg",
+          "name": "IMG_2463.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/076-img-2464.jpg",
+          "name": "IMG_2464.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/077-img-2465.jpg",
+          "name": "IMG_2465.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/078-img-2466.jpg",
+          "name": "IMG_2466.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/079-img-2467.jpg",
+          "name": "IMG_2467.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/080-img-2468.jpg",
+          "name": "IMG_2468.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/081-img-2469.jpg",
+          "name": "IMG_2469.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/082-img-2470.jpg",
+          "name": "IMG_2470.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/083-img-2471.jpg",
+          "name": "IMG_2471.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-308e2cr/084-img-6991.jpg",
+          "name": "IMG_6991.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "komatsu-pc78uu",
+      "display_name": "Komatsu PC78UU",
+      "model_to_show": "Komatsu PC78UU",
+      "year": 2018,
+      "year_source": "client-provided",
+      "hours": "3200 hrs",
+      "price": "125 Lakhs",
+      "media_folder": "Assets/Machine Media/02_Komatsu_PC78UU_2018_3200hrs_125Lakhs",
+      "hero_media": {
+        "src": "assets/media/komatsu-pc78uu/002-img-2472.mp4",
+        "name": "IMG_2472.MOV",
+        "type": "video"
+      },
+      "media": [
+        {
+          "src": "assets/media/komatsu-pc78uu/001-img-2472-2.mp4",
+          "name": "IMG_2472 2.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/002-img-2472.mp4",
+          "name": "IMG_2472.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/003-img-2473-2.mp4",
+          "name": "IMG_2473 2.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/004-img-2473.mp4",
+          "name": "IMG_2473.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/005-img-2474-2.mp4",
+          "name": "IMG_2474 2.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/006-img-2474.mp4",
+          "name": "IMG_2474.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/007-img-2475.jpg",
+          "name": "IMG_2475.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/008-img-2476.jpg",
+          "name": "IMG_2476.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/009-img-2477.jpg",
+          "name": "IMG_2477.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/010-img-2478.jpg",
+          "name": "IMG_2478.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/011-img-2479.jpg",
+          "name": "IMG_2479.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/012-img-2480-2.jpg",
+          "name": "IMG_2480 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/013-img-2480.jpg",
+          "name": "IMG_2480.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/014-img-2481-2.jpg",
+          "name": "IMG_2481 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/015-img-2481.jpg",
+          "name": "IMG_2481.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/016-img-2482-2.jpg",
+          "name": "IMG_2482 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/017-img-2482.jpg",
+          "name": "IMG_2482.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/018-img-2483-2.jpg",
+          "name": "IMG_2483 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/019-img-2483.jpg",
+          "name": "IMG_2483.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/020-img-2484-2.jpg",
+          "name": "IMG_2484 2.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/021-img-2484.jpg",
+          "name": "IMG_2484.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/022-img-2485.jpg",
+          "name": "IMG_2485.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/023-img-2486.jpg",
+          "name": "IMG_2486.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/024-img-2487.jpg",
+          "name": "IMG_2487.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/025-img-2488.jpg",
+          "name": "IMG_2488.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/026-img-2489.jpg",
+          "name": "IMG_2489.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/027-img-2490.jpg",
+          "name": "IMG_2490.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/028-img-2491.jpg",
+          "name": "IMG_2491.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/029-img-2492.jpg",
+          "name": "IMG_2492.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/030-img-2493.jpg",
+          "name": "IMG_2493.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/031-img-2494.jpg",
+          "name": "IMG_2494.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/032-img-2495.jpg",
+          "name": "IMG_2495.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/033-img-2496.jpg",
+          "name": "IMG_2496.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/034-img-2497.jpg",
+          "name": "IMG_2497.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/035-img-2498.jpg",
+          "name": "IMG_2498.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/036-img-2499.jpg",
+          "name": "IMG_2499.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/037-img-2500.jpg",
+          "name": "IMG_2500.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/038-img-2501.jpg",
+          "name": "IMG_2501.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/039-img-2502.jpg",
+          "name": "IMG_2502.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/040-img-2503.jpg",
+          "name": "IMG_2503.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/041-img-2504.jpg",
+          "name": "IMG_2504.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/042-img-2505.jpg",
+          "name": "IMG_2505.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/043-img-2506.jpg",
+          "name": "IMG_2506.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/044-img-2507.jpg",
+          "name": "IMG_2507.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/045-img-2508.jpg",
+          "name": "IMG_2508.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/046-img-2509.jpg",
+          "name": "IMG_2509.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/047-img-2510.jpg",
+          "name": "IMG_2510.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/048-img-2511.jpg",
+          "name": "IMG_2511.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/049-img-2512.jpg",
+          "name": "IMG_2512.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/050-img-2513.jpg",
+          "name": "IMG_2513.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/051-img-2514.jpg",
+          "name": "IMG_2514.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/052-img-2515.jpg",
+          "name": "IMG_2515.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/053-img-2516.jpg",
+          "name": "IMG_2516.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/054-img-2517.jpg",
+          "name": "IMG_2517.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/055-img-2518.jpg",
+          "name": "IMG_2518.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/056-img-2519.jpg",
+          "name": "IMG_2519.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/057-img-2520.jpg",
+          "name": "IMG_2520.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/058-img-2521.jpg",
+          "name": "IMG_2521.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/059-img-2522.jpg",
+          "name": "IMG_2522.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/060-img-2523.jpg",
+          "name": "IMG_2523.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/061-img-2524.jpg",
+          "name": "IMG_2524.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc78uu/062-img-2525.jpg",
+          "name": "IMG_2525.HEIC",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "cat-030esr",
+      "display_name": "CAT small",
+      "model_to_show": "CAT 030ESR",
+      "year": 2020,
+      "year_source": "import document",
+      "hours": "3000 hrs",
+      "price": "55 Lakhs",
+      "media_folder": "Assets/Machine Media/03_CAT_030ESR_Small_2016_3000hrs_55Lakhs",
+      "hero_media": {
+        "src": "assets/media/cat-030esr/001-img-2526.mp4",
+        "name": "IMG_2526.MOV",
+        "type": "video"
+      },
+      "media": [
+        {
+          "src": "assets/media/cat-030esr/001-img-2526.mp4",
+          "name": "IMG_2526.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/cat-030esr/002-img-2527.jpg",
+          "name": "IMG_2527.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/003-img-2528.jpg",
+          "name": "IMG_2528.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/004-img-2529.jpg",
+          "name": "IMG_2529.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/005-img-2530.jpg",
+          "name": "IMG_2530.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/006-img-2531.jpg",
+          "name": "IMG_2531.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/007-img-2532.jpg",
+          "name": "IMG_2532.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/008-img-2533.jpg",
+          "name": "IMG_2533.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/009-img-2534.jpg",
+          "name": "IMG_2534.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/010-img-2535.jpg",
+          "name": "IMG_2535.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/011-img-2536.jpg",
+          "name": "IMG_2536.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/012-img-2537.jpg",
+          "name": "IMG_2537.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/013-img-2538.jpg",
+          "name": "IMG_2538.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/014-img-2539.jpg",
+          "name": "IMG_2539.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/015-img-2540.jpg",
+          "name": "IMG_2540.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/016-img-2541.jpg",
+          "name": "IMG_2541.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/017-img-2542.jpg",
+          "name": "IMG_2542.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/018-img-2543.jpg",
+          "name": "IMG_2543.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/019-img-2544.jpg",
+          "name": "IMG_2544.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/020-img-2545.jpg",
+          "name": "IMG_2545.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/021-img-2546.jpg",
+          "name": "IMG_2546.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/022-img-2547.jpg",
+          "name": "IMG_2547.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/023-img-2548.jpg",
+          "name": "IMG_2548.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/024-img-2549.jpg",
+          "name": "IMG_2549.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/025-img-2550.jpg",
+          "name": "IMG_2550.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/026-img-2551.jpg",
+          "name": "IMG_2551.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/027-img-2552.jpg",
+          "name": "IMG_2552.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/028-img-2553.jpg",
+          "name": "IMG_2553.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/029-img-2554.jpg",
+          "name": "IMG_2554.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/030-img-2555.jpg",
+          "name": "IMG_2555.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/cat-030esr/031-img-2556.jpg",
+          "name": "IMG_2556.HEIC",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "komatsu-pc35mr-3",
+      "display_name": "Komatsu PC35MR",
+      "model_to_show": "Komatsu PC35MR-3",
+      "year": 2015,
+      "year_source": "import document",
+      "hours": "1900 hrs",
+      "price": "39 Lakhs",
+      "media_folder": "Assets/Machine Media/04_Komatsu_PC35MR_2014_1900hrs",
+      "hero_media": {
+        "src": "assets/media/komatsu-pc35mr-3/029-img-2585.mp4",
+        "name": "IMG_2585.MOV",
+        "type": "video"
+      },
+      "media": [
+        {
+          "src": "assets/media/komatsu-pc35mr-3/001-img-2557.jpg",
+          "name": "IMG_2557.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/002-img-2558.jpg",
+          "name": "IMG_2558.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/003-img-2559.jpg",
+          "name": "IMG_2559.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/004-img-2560.jpg",
+          "name": "IMG_2560.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/005-img-2561.jpg",
+          "name": "IMG_2561.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/006-img-2562.jpg",
+          "name": "IMG_2562.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/007-img-2563.jpg",
+          "name": "IMG_2563.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/008-img-2564.jpg",
+          "name": "IMG_2564.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/009-img-2565.jpg",
+          "name": "IMG_2565.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/010-img-2566.jpg",
+          "name": "IMG_2566.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/011-img-2567.jpg",
+          "name": "IMG_2567.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/012-img-2568.jpg",
+          "name": "IMG_2568.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/013-img-2569.jpg",
+          "name": "IMG_2569.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/014-img-2570.jpg",
+          "name": "IMG_2570.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/015-img-2571.jpg",
+          "name": "IMG_2571.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/016-img-2572.jpg",
+          "name": "IMG_2572.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/017-img-2573.jpg",
+          "name": "IMG_2573.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/018-img-2574.jpg",
+          "name": "IMG_2574.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/019-img-2575.jpg",
+          "name": "IMG_2575.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/020-img-2576.jpg",
+          "name": "IMG_2576.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/021-img-2577.jpg",
+          "name": "IMG_2577.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/022-img-2578.jpg",
+          "name": "IMG_2578.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/023-img-2579.jpg",
+          "name": "IMG_2579.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/024-img-2580.jpg",
+          "name": "IMG_2580.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/025-img-2581.jpg",
+          "name": "IMG_2581.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/026-img-2582.jpg",
+          "name": "IMG_2582.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/027-img-2583.jpg",
+          "name": "IMG_2583.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/028-img-2584.jpg",
+          "name": "IMG_2584.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/029-img-2585.mp4",
+          "name": "IMG_2585.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/030-img-2586.jpg",
+          "name": "IMG_2586.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/031-img-2587.jpg",
+          "name": "IMG_2587.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc35mr-3/032-img-2588.jpg",
+          "name": "IMG_2588.HEIC",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "kobelco-sr30-sk30sr",
+      "display_name": "Kobelco Beetle 30SR",
+      "model_to_show": "Kobelco SR30 / SK30SR",
+      "year": 2017,
+      "year_source": "import document",
+      "hours": "893 hrs",
+      "price": "49 Lakhs",
+      "media_folder": "Assets/Machine Media/05_Kobelco_Beetle_30SR_2012_893hrs_49Lakhs",
+      "hero_media": {
+        "src": "assets/media/kobelco-sr30-sk30sr/034-img-2621.mp4",
+        "name": "IMG_2621.MOV",
+        "type": "video"
+      },
+      "media": [
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/001-img-2589.jpg",
+          "name": "IMG_2589.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/002-img-2590.jpg",
+          "name": "IMG_2590.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/003-img-2591.jpg",
+          "name": "IMG_2591.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/004-img-2592.jpg",
+          "name": "IMG_2592.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/005-img-2593.jpg",
+          "name": "IMG_2593.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/006-img-2594.jpg",
+          "name": "IMG_2594.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/007-img-2595.jpg",
+          "name": "IMG_2595.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/008-img-2596.jpg",
+          "name": "IMG_2596.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/009-img-2597.jpg",
+          "name": "IMG_2597.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/010-img-2598.jpg",
+          "name": "IMG_2598.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/011-img-2599.jpg",
+          "name": "IMG_2599.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/012-img-2600.jpg",
+          "name": "IMG_2600.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/013-img-2601.jpg",
+          "name": "IMG_2601.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/014-img-2602.jpg",
+          "name": "IMG_2602.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/015-img-2603.jpg",
+          "name": "IMG_2603.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/016-img-2604.jpg",
+          "name": "IMG_2604.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/017-img-2605.jpg",
+          "name": "IMG_2605.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/018-img-2606.jpg",
+          "name": "IMG_2606.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/019-img-2607.jpg",
+          "name": "IMG_2607.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/020-img-2608.jpg",
+          "name": "IMG_2608.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/021-img-2609.jpg",
+          "name": "IMG_2609.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/022-img-2610.jpg",
+          "name": "IMG_2610.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/023-img-2611.jpg",
+          "name": "IMG_2611.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/024-img-2612.jpg",
+          "name": "IMG_2612.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/025-img-2613.jpg",
+          "name": "IMG_2613.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/026-img-2614.jpg",
+          "name": "IMG_2614.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/027-img-2615.jpg",
+          "name": "IMG_2615.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/028-img-2616.jpg",
+          "name": "IMG_2616.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/029-img-2617.jpg",
+          "name": "IMG_2617.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/030-img-2618.jpg",
+          "name": "IMG_2618.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/031-img-2619.jpg",
+          "name": "IMG_2619.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/032-img-2620.jpg",
+          "name": "IMG_2620.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/033-img-2621-2.mp4",
+          "name": "IMG_2621 2.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/034-img-2621.mp4",
+          "name": "IMG_2621.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/035-img-2622.jpg",
+          "name": "IMG_2622.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/kobelco-sr30-sk30sr/036-img-2623.jpg",
+          "name": "IMG_2623.HEIC",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "komatsu-pc20uu-30",
+      "display_name": "Komatsu PC20UU",
+      "model_to_show": "Komatsu PC20UU-30",
+      "year": 2015,
+      "year_source": "import document",
+      "hours": "1028 hrs",
+      "price": "39 Lakhs",
+      "media_folder": "Assets/Machine Media/06_Komatsu_PC20UU_2010_1028hrs_39Lakhs",
+      "hero_media": {
+        "src": "assets/media/komatsu-pc20uu-30/038-img-2661.mp4",
+        "name": "IMG_2661.MOV",
+        "type": "video"
+      },
+      "media": [
+        {
+          "src": "assets/media/komatsu-pc20uu-30/001-img-2624.jpg",
+          "name": "IMG_2624.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/002-img-2625.jpg",
+          "name": "IMG_2625.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/003-img-2626.jpg",
+          "name": "IMG_2626.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/004-img-2627.jpg",
+          "name": "IMG_2627.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/005-img-2628.jpg",
+          "name": "IMG_2628.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/006-img-2629.jpg",
+          "name": "IMG_2629.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/007-img-2630.jpg",
+          "name": "IMG_2630.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/008-img-2631.jpg",
+          "name": "IMG_2631.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/009-img-2632.jpg",
+          "name": "IMG_2632.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/010-img-2633.jpg",
+          "name": "IMG_2633.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/011-img-2634.jpg",
+          "name": "IMG_2634.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/012-img-2635.jpg",
+          "name": "IMG_2635.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/013-img-2636.jpg",
+          "name": "IMG_2636.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/014-img-2637.jpg",
+          "name": "IMG_2637.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/015-img-2638.jpg",
+          "name": "IMG_2638.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/016-img-2639.jpg",
+          "name": "IMG_2639.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/017-img-2640.jpg",
+          "name": "IMG_2640.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/018-img-2641.jpg",
+          "name": "IMG_2641.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/019-img-2642.jpg",
+          "name": "IMG_2642.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/020-img-2643.jpg",
+          "name": "IMG_2643.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/021-img-2644.jpg",
+          "name": "IMG_2644.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/022-img-2645.jpg",
+          "name": "IMG_2645.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/023-img-2646.jpg",
+          "name": "IMG_2646.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/024-img-2647.jpg",
+          "name": "IMG_2647.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/025-img-2648.jpg",
+          "name": "IMG_2648.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/026-img-2649.jpg",
+          "name": "IMG_2649.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/027-img-2650.jpg",
+          "name": "IMG_2650.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/028-img-2651.jpg",
+          "name": "IMG_2651.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/029-img-2652.jpg",
+          "name": "IMG_2652.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/030-img-2653.jpg",
+          "name": "IMG_2653.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/031-img-2654.jpg",
+          "name": "IMG_2654.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/032-img-2655.jpg",
+          "name": "IMG_2655.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/033-img-2656.jpg",
+          "name": "IMG_2656.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/034-img-2657.jpg",
+          "name": "IMG_2657.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/035-img-2658.jpg",
+          "name": "IMG_2658.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/036-img-2659.jpg",
+          "name": "IMG_2659.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/037-img-2660.jpg",
+          "name": "IMG_2660.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/038-img-2661.mp4",
+          "name": "IMG_2661.MOV",
+          "type": "video"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/039-img-2662.jpg",
+          "name": "IMG_2662.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/040-img-2663.jpg",
+          "name": "IMG_2663.HEIC",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc20uu-30/041-img-2664.jpg",
+          "name": "IMG_2664.HEIC",
+          "type": "image"
+        }
+      ]
+    }
+  ]
+};
