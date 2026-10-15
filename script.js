@@ -76,10 +76,15 @@ function thumbEntries(machine) {
     .filter((entry) => entry.item.src !== hero.src);
 }
 
+function isSold(machine) {
+  return Boolean(machine.sold);
+}
+
 function card(machine) {
   const article = document.createElement("article");
   const brand = brandSlug(machine);
-  article.className = `machine-card brand-${brand}`;
+  const sold = isSold(machine);
+  article.className = `machine-card brand-${brand}${sold ? " is-sold" : ""}`;
   article.id = machine.id;
   article.dataset.brand = brand;
 
@@ -107,7 +112,7 @@ function card(machine) {
         <h2>${machine.model_to_show}</h2>
         <div class="price-block">
           <p class="price">${machine.price}</p>
-          <span class="price-note">Negotiable</span>
+          <span class="price-note">${sold ? "Sold" : "Negotiable"}</span>
         </div>
       </div>
       <div class="specs" aria-label="${machine.model_to_show} specifications">
@@ -122,7 +127,7 @@ function card(machine) {
         <a href="tel:+94766975261">Call</a>
         <a class="primary" href="${whatsappHref(machine)}">WhatsApp</a>
       </div>
-      <p class="note">Ask for <strong>${machine.model_to_show}</strong> when you call.</p>
+      <p class="note">${sold ? "This machine is sold." : `Ask for <strong>${machine.model_to_show}</strong> when you call.`}</p>
     </div>
   `;
 
@@ -131,12 +136,14 @@ function card(machine) {
 
 function heroMedia(machine, counts) {
   const hero = heroItem(machine);
+  const sold = isSold(machine);
   const media = isVideo(hero)
     ? `<video class="hero-img" src="${hero.src}" muted playsinline preload="metadata"></video>`
     : `<img class="hero-img" src="${hero.src}" alt="${machine.model_to_show}">`;
   return `
     <button type="button" class="hero-btn" data-machine="${machine.id}" data-index="${heroIndex(machine)}" aria-label="Open ${machine.model_to_show} photos">
       ${media}
+      ${sold ? `<span class="sold-stamp">Sold</span>` : ""}
       <span class="hero-overlay">
         <span class="hero-count">${counts.total} photos</span>
       </span>
@@ -177,11 +184,14 @@ function renderCompare(machines) {
       <span class="idx-price-label">Price</span>
     </div>
     ${machines.map((machine) => `
-      <a class="compare-row brand-${brandSlug(machine)}" href="#${machine.id}">
+      <a class="compare-row brand-${brandSlug(machine)}${isSold(machine) ? " is-sold" : ""}" href="#${machine.id}">
         <span class="brand-chip ${brandSlug(machine)}">${machineBrand(machine)}</span>
         <span class="idx-model">${machine.model_to_show}</span>
         <span class="idx-meta">${classLabel(machine).replace(" class", "")} · ${machine.year} · ${machine.hours}</span>
-        <strong class="idx-price">${machine.price}</strong>
+        <span class="idx-price-wrap">
+          <strong class="idx-price">${machine.price}</strong>
+          ${isSold(machine) ? `<span class="sold-flag">Sold</span>` : ""}
+        </span>
       </a>
     `).join("")}
   `;

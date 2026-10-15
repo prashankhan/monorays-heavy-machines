@@ -768,7 +768,8 @@ window.MONORAYS_DATA = {
       "year": 2015,
       "year_source": "import document",
       "hours": "1900 hrs",
-      "price": "39 Lakhs",
+      "price": "59 Lakhs",
+      "sold": true,
       "media_folder": "Assets/Machine Media/04_Komatsu_PC35MR_2014_1900hrs",
       "hero_media": {
         "src": "assets/media/komatsu-pc35mr-3/img-2557.jpg",

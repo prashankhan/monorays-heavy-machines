@@ -326,11 +326,39 @@ main {
   font-weight: 800;
 }
 
+.idx-price-wrap,
 .idx-price,
 .compare-head .idx-price-label {
   justify-self: end;
   text-align: right;
   white-space: nowrap;
+}
+
+.idx-price-wrap {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}
+
+.compare-row.is-sold {
+  background: #f4f2ea;
+}
+
+.compare-row.is-sold .idx-price {
+  background: #6d6a63;
+}
+
+.compare-row.is-sold:hover,
+.compare-row.is-sold:focus-visible {
+  background: #ece8dc;
+}
+
+.sold-flag {
+  color: #9a1f12;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .brand-chip {
@@ -397,6 +425,37 @@ main {
 
 .machine-card:target {
   box-shadow: 0 0 0 3px var(--accent);
+}
+
+.machine-card.is-sold .hero-img {
+  filter: grayscale(0.35) brightness(0.82);
+}
+
+.sold-stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(-14deg);
+  padding: 6px 14px;
+  border: 3px solid #c31400;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #c31400;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.machine-card.is-sold .price {
+  background: #6d6a63;
+}
+
+.machine-card.is-sold .price-note {
+  color: #9a1f12;
 }
 
 .hero-btn {
@@ -791,10 +850,14 @@ img.dialog-media {
     font-size: 15px;
     line-height: 1.2;
   }
+  .idx-price-wrap,
   .idx-price {
     grid-area: price;
     align-self: center;
     min-width: 0;
+  }
+
+  .idx-price {
     padding: 7px 8px;
     font-size: 13px;
   }

@@ -14,9 +14,9 @@
     "campaign_duration": "30 days",
     "platform_budget_lkr": {
       "ikman": 50000,
-      "facebook_instagram": 150000,
-      "tiktok": 120000,
-      "total": 320000
+      "facebook_instagram": 75000,
+      "tiktok": 51000,
+      "total": 176000
     }
   },
   "machines": [
@@ -768,7 +768,8 @@
       "year": 2015,
       "year_source": "import document",
       "hours": "1900 hrs",
-      "price": "39 Lakhs",
+      "price": "59 Lakhs",
+      "sold": true,
       "media_folder": "Assets/Machine Media/04_Komatsu_PC35MR_2014_1900hrs",
       "hero_media": {
         "src": "assets/media/komatsu-pc35mr-3/img-2557.jpg",
