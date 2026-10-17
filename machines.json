@@ -1352,6 +1352,215 @@
           "type": "image"
         }
       ]
+    },
+    {
+      "id": "komatsu-pc30",
+      "display_name": "Komatsu PC-30",
+      "model_to_show": "Komatsu PC-30",
+      "year": 2014,
+      "year_source": "client-provided",
+      "hours": "1900 hrs",
+      "price": "TBA",
+      "media_folder": "Assets/Machine Media/07_Komatsu_PC30_2014_1900hrs_TBA",
+      "hero_media": {
+        "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-42.jpg",
+        "name": "PHOTO-2026-10-03-08-30-42.jpg",
+        "type": "image"
+      },
+      "media": [
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-42-2.jpg",
+          "name": "PHOTO-2026-10-03-08-30-42 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-42.jpg",
+          "name": "PHOTO-2026-10-03-08-30-42.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-43-2.jpg",
+          "name": "PHOTO-2026-10-03-08-30-43 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-43.jpg",
+          "name": "PHOTO-2026-10-03-08-30-43.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-44-2.jpg",
+          "name": "PHOTO-2026-10-03-08-30-44 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-44-3.jpg",
+          "name": "PHOTO-2026-10-03-08-30-44 3.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-44.jpg",
+          "name": "PHOTO-2026-10-03-08-30-44.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-45-2.jpg",
+          "name": "PHOTO-2026-10-03-08-30-45 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-45.jpg",
+          "name": "PHOTO-2026-10-03-08-30-45.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-46-2.jpg",
+          "name": "PHOTO-2026-10-03-08-30-46 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-46.jpg",
+          "name": "PHOTO-2026-10-03-08-30-46.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-47-2.jpg",
+          "name": "PHOTO-2026-10-03-08-30-47 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-47-3.jpg",
+          "name": "PHOTO-2026-10-03-08-30-47 3.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-47.jpg",
+          "name": "PHOTO-2026-10-03-08-30-47.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/komatsu-pc30/photo-2026-10-03-08-30-48.jpg",
+          "name": "PHOTO-2026-10-03-08-30-48.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "yanmar-2-5",
+      "display_name": "Yanmar 2.5",
+      "model_to_show": "Yanmar 2.5",
+      "year": 2014,
+      "year_source": "client-provided",
+      "hours": "400 hrs",
+      "price": "TBA",
+      "media_folder": "Assets/Machine Media/08_Yanmar_2.5_2014_400hrs_TBA",
+      "hero_media": {
+        "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-53.jpg",
+        "name": "PHOTO-2026-10-03-08-36-53.jpg",
+        "type": "image"
+      },
+      "media": [
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-53.jpg",
+          "name": "PHOTO-2026-10-03-08-36-53.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-54-2.jpg",
+          "name": "PHOTO-2026-10-03-08-36-54 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-54-3.jpg",
+          "name": "PHOTO-2026-10-03-08-36-54 3.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-54.jpg",
+          "name": "PHOTO-2026-10-03-08-36-54.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-58-2.jpg",
+          "name": "PHOTO-2026-10-03-08-36-58 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-58.jpg",
+          "name": "PHOTO-2026-10-03-08-36-58.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-59-2.jpg",
+          "name": "PHOTO-2026-10-03-08-36-59 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-59-3.jpg",
+          "name": "PHOTO-2026-10-03-08-36-59 3.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-59-4.jpg",
+          "name": "PHOTO-2026-10-03-08-36-59 4.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-36-59.jpg",
+          "name": "PHOTO-2026-10-03-08-36-59.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-37-00-2.jpg",
+          "name": "PHOTO-2026-10-03-08-37-00 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-37-00-3.jpg",
+          "name": "PHOTO-2026-10-03-08-37-00 3.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-37-00-4.jpg",
+          "name": "PHOTO-2026-10-03-08-37-00 4.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-37-00.jpg",
+          "name": "PHOTO-2026-10-03-08-37-00.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-37-01-2.jpg",
+          "name": "PHOTO-2026-10-03-08-37-01 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-37-01-3.jpg",
+          "name": "PHOTO-2026-10-03-08-37-01 3.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-37-01-4.jpg",
+          "name": "PHOTO-2026-10-03-08-37-01 4.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-37-01.jpg",
+          "name": "PHOTO-2026-10-03-08-37-01.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-37-02-2.jpg",
+          "name": "PHOTO-2026-10-03-08-37-02 2.jpg",
+          "type": "image"
+        },
+        {
+          "src": "assets/media/yanmar-2-5/photo-2026-10-03-08-37-02.jpg",
+          "name": "PHOTO-2026-10-03-08-37-02.jpg",
+          "type": "image"
+        }
+      ]
     }
   ]
 }

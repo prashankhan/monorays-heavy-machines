@@ -20,10 +20,11 @@ const CLASS_LABEL = {
 };
 
 const FILTERS = [
-  { id: "all", label: "All 6" },
+  { id: "all", label: "All machines" },
   { id: "cat", label: "CAT" },
   { id: "komatsu", label: "Komatsu" },
   { id: "kobelco", label: "Kobelco" },
+  { id: "yanmar", label: "Yanmar" },
 ];
 
 let activeMachine = null;
@@ -42,6 +43,7 @@ function isVideo(item) {
 function machineBrand(machine) {
   if (machine.id.startsWith("cat-")) return "CAT";
   if (machine.id.startsWith("komatsu-")) return "Komatsu";
+  if (machine.id.startsWith("yanmar-")) return "Yanmar";
   return "Kobelco";
 }
 
@@ -112,7 +114,7 @@ function card(machine) {
         <h2>${machine.model_to_show}</h2>
         <div class="price-block">
           <p class="price">${machine.price}</p>
-          <span class="price-note">${sold ? "Sold" : "Negotiable"}</span>
+          <span class="price-note">${sold ? "Sold" : machine.price === "TBA" ? "Price to be announced" : "Negotiable"}</span>
         </div>
       </div>
       <div class="specs" aria-label="${machine.model_to_show} specifications">
@@ -187,7 +189,7 @@ function renderCompare(machines) {
       <a class="compare-row brand-${brandSlug(machine)}${isSold(machine) ? " is-sold" : ""}" href="#${machine.id}">
         <span class="brand-chip ${brandSlug(machine)}">${machineBrand(machine)}</span>
         <span class="idx-model">${machine.model_to_show}</span>
-        <span class="idx-meta">${classLabel(machine).replace(" class", "")} · ${machine.year} · ${machine.hours}</span>
+        <span class="idx-meta">${[classLabel(machine).replace(" class", ""), machine.year, machine.hours].filter(Boolean).join(" · ")}</span>
         <span class="idx-price-wrap">
           <strong class="idx-price">${machine.price}</strong>
           ${isSold(machine) ? `<span class="sold-flag">Sold</span>` : ""}
@@ -200,7 +202,7 @@ function renderCompare(machines) {
 function renderFilters() {
   filters.innerHTML = FILTERS.map((item) => `
     <button type="button" class="filter${item.id === activeFilter ? " is-on" : ""}" data-filter="${item.id}" aria-pressed="${item.id === activeFilter}">
-      ${item.label}
+      ${item.id === "all" ? `All ${data.machines.length}` : item.label}
     </button>
   `).join("");
 }
@@ -230,6 +232,7 @@ const byId = new Map(data.machines.map((machine) => [machine.id, machine]));
 renderCompare(data.machines);
 renderFilters();
 data.machines.forEach((machine) => grid.appendChild(card(machine)));
+applyFilter();
 
 grid.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-index]");

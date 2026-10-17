@@ -389,6 +389,15 @@ main {
   color: #0f4f4a;
 }
 
+.brand-chip.yanmar {
+  background: #fbe0e3;
+  color: #9c2034;
+}
+
+.machine-card.brand-yanmar {
+  border-top: 5px solid #c82d44;
+}
+
 .grid-label {
   margin: 0 0 12px;
   color: var(--muted);
