@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&display=swap">
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=8">
   </head>
   <body>
     <a class="skip-link" href="#machine-compare">Skip to machine list</a>
@@ -47,19 +47,29 @@
         </div>
       </section>
 
-      <section class="chooser" aria-labelledby="chooser-title">
-        <div class="chooser-head">
-          <div>
-            <h2 id="chooser-title">Compare before you scroll</h2>
-            <p class="chooser-note">Listed asking prices are negotiable. TBA: price to be announced.</p>
+      <div class="listing">
+        <section class="chooser" aria-labelledby="chooser-title">
+          <div class="chooser-head">
+            <div>
+              <h2 id="chooser-title">Compare before you scroll</h2>
+              <p class="chooser-note">Prices are negotiable. TBA means still to be announced.</p>
+            </div>
+            <div class="filters" id="brand-filters" role="group" aria-label="Filter by brand"></div>
           </div>
-          <div class="filters" id="brand-filters" role="group" aria-label="Filter by brand"></div>
-        </div>
-        <div class="compare" id="machine-compare"></div>
-      </section>
+          <div class="compare" id="machine-compare"></div>
+        </section>
 
-      <p class="grid-label" id="grid-label">All machines</p>
-      <section id="machine-grid" class="machine-grid" aria-label="Available machines"></section>
+        <div class="listing-main">
+          <div class="listing-toolbar">
+            <p class="grid-label" id="grid-label">All machines</p>
+            <div class="view-toggle" id="view-toggle" role="group" aria-label="Card layout">
+              <button type="button" data-view="grid" aria-pressed="true">Grid</button>
+              <button type="button" data-view="stack" aria-pressed="false">Stack</button>
+            </div>
+          </div>
+          <section id="machine-grid" class="machine-grid" aria-label="Available machines"></section>
+        </div>
+      </div>
     </main>
 
     <nav class="sticky-actions" aria-label="Contact">
@@ -77,7 +87,7 @@
       </div>
     </dialog>
 
-    <script src="machine-data.js?v=3"></script>
-    <script src="script.js?v=3"></script>
+    <script src="machine-data.js?v=5"></script>
+    <script src="script.js?v=7"></script>
   </body>
 </html>

@@ -105,7 +105,8 @@ h1 {
 .sticky-actions a,
 .card-actions a,
 .see-all,
-.filter {
+.filter,
+.view-toggle button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -138,9 +139,14 @@ a:focus-visible {
 }
 
 main {
-  width: min(1180px, 100%);
+  width: min(1320px, 100%);
   margin: 0 auto;
   padding: 22px clamp(14px, 3vw, 28px) 96px;
+}
+
+.listing {
+  display: grid;
+  gap: 20px;
 }
 
 .intro {
@@ -235,11 +241,18 @@ main {
 }
 
 .chooser {
-  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--panel);
   overflow: hidden;
+}
+
+.compare {
+  min-height: 0;
+  overflow: auto;
 }
 
 .chooser-head {
@@ -266,11 +279,14 @@ main {
 
 .filters {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-wrap: nowrap;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 2px;
 }
 
 .filter {
+  flex-shrink: 0;
   min-height: 38px;
   border: 1px solid var(--line);
   background: white;
@@ -283,33 +299,33 @@ main {
   color: white;
 }
 
-.compare-head,
 .compare-row {
   display: grid;
-  grid-template-columns: 92px minmax(160px, 1.3fr) minmax(170px, 1fr) 128px;
-  gap: 10px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
   align-items: center;
-}
-
-.idx-meta {
-  color: var(--muted);
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.compare-head {
-  padding: 8px 16px;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.compare-row {
-  padding: 12px 16px;
+  padding: 10px 12px;
   border-top: 1px solid var(--line);
   background: white;
+}
+
+.compare-row.brand-cat { box-shadow: inset 3px 0 0 var(--cat); }
+.compare-row.brand-komatsu { box-shadow: inset 3px 0 0 var(--komatsu); }
+.compare-row.brand-kobelco { box-shadow: inset 3px 0 0 var(--kobelco); }
+.compare-row.brand-yanmar { box-shadow: inset 3px 0 0 #c82d44; }
+
+.idx-model {
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.idx-price-wrap,
+.idx-price {
+  justify-self: end;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .compare-row[hidden],
@@ -318,20 +334,13 @@ main {
 }
 
 .compare-row:hover,
-.compare-row:focus-visible {
+.compare-row:focus-visible,
+.compare-row.is-current {
   background: #fff0e8;
 }
 
-.idx-model {
-  font-weight: 800;
-}
-
-.idx-price-wrap,
-.idx-price,
-.compare-head .idx-price-label {
-  justify-self: end;
-  text-align: right;
-  white-space: nowrap;
+.compare-row.is-current {
+  box-shadow: inset 3px 0 0 var(--accent);
 }
 
 .idx-price-wrap {
@@ -349,7 +358,8 @@ main {
 }
 
 .compare-row.is-sold:hover,
-.compare-row.is-sold:focus-visible {
+.compare-row.is-sold:focus-visible,
+.compare-row.is-sold.is-current {
   background: #ece8dc;
 }
 
@@ -398,17 +408,141 @@ main {
   border-top: 5px solid #c82d44;
 }
 
-.grid-label {
+.listing-main {
+  min-width: 0;
+}
+
+.listing-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin: 0 0 12px;
+}
+
+.grid-label {
+  margin: 0;
   color: var(--muted);
   font-size: 14px;
   font-weight: 800;
+}
+
+.view-toggle {
+  display: flex;
+  flex-shrink: 0;
+  gap: 6px;
+}
+
+.view-toggle button {
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.view-toggle button.is-on {
+  background: var(--dark);
+  border-color: var(--dark);
+  color: white;
 }
 
 .machine-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+}
+
+.machine-grid.is-stack {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 821px) {
+  .machine-grid.is-stack .machine-card {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.42fr) minmax(0, 1fr);
+    align-items: stretch;
+    border-top-width: 1px;
+  }
+
+  .machine-grid.is-stack .machine-card.brand-cat {
+    border-left: 5px solid var(--cat);
+  }
+
+  .machine-grid.is-stack .machine-card.brand-komatsu {
+    border-left: 5px solid var(--komatsu);
+  }
+
+  .machine-grid.is-stack .machine-card.brand-kobelco {
+    border-left: 5px solid var(--kobelco);
+  }
+
+  .machine-grid.is-stack .machine-card.brand-yanmar {
+    border-left: 5px solid #c82d44;
+  }
+
+  .machine-grid.is-stack .hero-btn,
+  .machine-grid.is-stack .hero-img {
+    height: 100%;
+    min-height: 240px;
+  }
+
+  .machine-grid.is-stack .hero-img {
+    aspect-ratio: auto;
+  }
+
+  .machine-grid.is-stack .machine-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .machine-grid.is-stack .machine-card h2 {
+    min-width: 0;
+    font-size: clamp(22px, 2vw, 28px);
+  }
+
+  .machine-grid.is-stack .thumbs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .machine-grid.is-stack .card-actions {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .listing {
+    grid-template-columns: minmax(300px, 0.32fr) minmax(0, 0.68fr);
+    align-items: start;
+  }
+
+  .chooser {
+    position: sticky;
+    top: 96px;
+    z-index: 4;
+    max-height: calc(100dvh - 108px);
+    overflow: hidden;
+  }
+
+  .chooser-head {
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px 12px 10px;
+  }
+
+  .chooser-head h2 {
+    font-size: 16px;
+  }
+
+  .filter {
+    flex-shrink: 0;
+    min-height: 34px;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
 }
 
 .machine-card {
@@ -527,8 +661,8 @@ main {
 
 .machine-card h2 {
   margin: 0;
-  font-size: clamp(22px, 2.4vw, 30px);
-  line-height: 1.08;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.15;
 }
 
 .model {
@@ -556,6 +690,12 @@ main {
   text-align: center;
   font-size: 18px;
   font-weight: 900;
+}
+
+.compare-row .idx-price {
+  min-width: 0;
+  padding: 7px 8px;
+  font-size: 13px;
 }
 
 .price-note {
@@ -839,42 +979,8 @@ img.dialog-media {
     padding: 8px 12px;
   }
 
-  .compare-head {
+  .view-toggle {
     display: none;
-  }
-
-  .compare-row {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    grid-template-areas:
-      "brand model price"
-      ". meta price";
-    gap: 2px 8px;
-    padding: 10px 12px;
-  }
-
-  .compare-row .brand-chip { grid-area: brand; }
-  .idx-model {
-    grid-area: model;
-    min-width: 0;
-    font-size: 15px;
-    line-height: 1.2;
-  }
-  .idx-price-wrap,
-  .idx-price {
-    grid-area: price;
-    align-self: center;
-    min-width: 0;
-  }
-
-  .idx-price {
-    padding: 7px 8px;
-    font-size: 13px;
-  }
-  .idx-meta {
-    grid-area: meta;
-    overflow: hidden;
-    font-size: 12px;
-    text-overflow: ellipsis;
   }
 
   .machine-grid {

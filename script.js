@@ -2,6 +2,7 @@ const grid = document.querySelector("#machine-grid");
 const compare = document.querySelector("#machine-compare");
 const filters = document.querySelector("#brand-filters");
 const gridLabel = document.querySelector("#grid-label");
+const viewToggle = document.querySelector("#view-toggle");
 const dialog = document.querySelector("#machine-dialog");
 const dialogMedia = document.querySelector("#dialog-media");
 const dialogCount = document.querySelector("#dialog-count");
@@ -17,6 +18,8 @@ const CLASS_LABEL = {
   "komatsu-pc35mr-3": "3.5-ton class",
   "kobelco-sr30-sk30sr": "3-ton class",
   "komatsu-pc20uu-30": "2-ton class",
+  "komatsu-pc30": "3-ton class",
+  "yanmar-2-5": "2.5-ton class",
 };
 
 const FILTERS = [
@@ -30,6 +33,7 @@ const FILTERS = [
 let activeMachine = null;
 let activeIndex = 0;
 let activeFilter = "all";
+let cardView = localStorage.getItem("monorays-card-view") === "stack" ? "stack" : "grid";
 
 function whatsappHref(machine) {
   const text = encodeURIComponent(`Hi, I am interested in the ${machine.model_to_show}. Is it available for inspection in Vavuniya?`);
@@ -82,6 +86,16 @@ function isSold(machine) {
   return Boolean(machine.sold);
 }
 
+function listedMachines(machines) {
+  return [...machines].sort((a, b) => Number(isSold(a)) - Number(isSold(b)));
+}
+
+function priceNote(machine) {
+  if (isSold(machine)) return "Sold";
+  if (machine.price === "TBA") return "Ask for price";
+  return "Negotiable";
+}
+
 function card(machine) {
   const article = document.createElement("article");
   const brand = brandSlug(machine);
@@ -114,7 +128,7 @@ function card(machine) {
         <h2>${machine.model_to_show}</h2>
         <div class="price-block">
           <p class="price">${machine.price}</p>
-          <span class="price-note">${sold ? "Sold" : machine.price === "TBA" ? "Price to be announced" : "Negotiable"}</span>
+          <span class="price-note">${priceNote(machine)}</span>
         </div>
       </div>
       <div class="specs" aria-label="${machine.model_to_show} specifications">
@@ -178,31 +192,37 @@ function stepMedia(delta) {
 }
 
 function renderCompare(machines) {
-  compare.innerHTML = `
-    <div class="compare-head" aria-hidden="true">
-      <span>Brand</span>
-      <span>Machine</span>
-      <span>Specs</span>
-      <span class="idx-price-label">Price</span>
-    </div>
-    ${machines.map((machine) => `
-      <a class="compare-row brand-${brandSlug(machine)}${isSold(machine) ? " is-sold" : ""}" href="#${machine.id}">
-        <span class="brand-chip ${brandSlug(machine)}">${machineBrand(machine)}</span>
+  compare.innerHTML = listedMachines(machines).map((machine, index) => `
+      <a class="compare-row brand-${brandSlug(machine)}${isSold(machine) ? " is-sold" : ""}${index === 0 ? " is-current" : ""}" href="#${machine.id}">
         <span class="idx-model">${machine.model_to_show}</span>
-        <span class="idx-meta">${[classLabel(machine).replace(" class", ""), machine.year, machine.hours].filter(Boolean).join(" · ")}</span>
         <span class="idx-price-wrap">
           <strong class="idx-price">${machine.price}</strong>
           ${isSold(machine) ? `<span class="sold-flag">Sold</span>` : ""}
         </span>
       </a>
-    `).join("")}
-  `;
+    `).join("");
+}
+
+function setCurrentRow(id) {
+  const rows = [...compare.querySelectorAll(".compare-row")];
+  rows.forEach((row) => {
+    row.classList.toggle("is-current", row.getAttribute("href") === `#${id}`);
+  });
+}
+
+function applyCardView() {
+  grid.classList.toggle("is-stack", cardView === "stack");
+  [...viewToggle.querySelectorAll("[data-view]")].forEach((button) => {
+    const isOn = button.dataset.view === cardView;
+    button.classList.toggle("is-on", isOn);
+    button.setAttribute("aria-pressed", isOn ? "true" : "false");
+  });
 }
 
 function renderFilters() {
   filters.innerHTML = FILTERS.map((item) => `
     <button type="button" class="filter${item.id === activeFilter ? " is-on" : ""}" data-filter="${item.id}" aria-pressed="${item.id === activeFilter}">
-      ${item.id === "all" ? `All ${data.machines.length}` : item.label}
+      ${item.id === "all" ? "All" : item.label}
     </button>
   `).join("");
 }
@@ -224,6 +244,11 @@ function applyFilter() {
     ? `All ${visible} machines`
     : `${visible} ${FILTERS.find((item) => item.id === activeFilter).label} machine${visible === 1 ? "" : "s"}`;
   renderFilters();
+  const current = compare.querySelector(".compare-row.is-current");
+  if (current?.hidden) {
+    const firstVisible = rows.find((row) => !row.hidden);
+    if (firstVisible) setCurrentRow(firstVisible.getAttribute("href").slice(1));
+  }
 }
 
 const data = window.MONORAYS_DATA;
@@ -231,8 +256,10 @@ const byId = new Map(data.machines.map((machine) => [machine.id, machine]));
 
 renderCompare(data.machines);
 renderFilters();
-data.machines.forEach((machine) => grid.appendChild(card(machine)));
+listedMachines(data.machines).forEach((machine) => grid.appendChild(card(machine)));
 applyFilter();
+applyCardView();
+if (location.hash) setCurrentRow(location.hash.slice(1));
 
 grid.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-index]");
@@ -248,6 +275,14 @@ filters.addEventListener("click", (event) => {
   applyFilter();
 });
 
+viewToggle.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-view]");
+  if (!button) return;
+  cardView = button.dataset.view;
+  localStorage.setItem("monorays-card-view", cardView);
+  applyCardView();
+});
+
 compare.addEventListener("click", (event) => {
   const row = event.target.closest("a.compare-row");
   if (!row) return;
@@ -257,6 +292,7 @@ compare.addEventListener("click", (event) => {
     activeFilter = "all";
     applyFilter();
   }
+  setCurrentRow(id);
 });
 
 closeDialog.addEventListener("click", () => dialog.close());
