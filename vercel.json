@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://monorays-heavy-machines.chanmaxsolutions.workers.dev/:path*",
+      "permanent": true
+    }
+  ]
+}
